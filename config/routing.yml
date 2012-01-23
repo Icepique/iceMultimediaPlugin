@@ -1,0 +1,23 @@
+ice_multimedia_ajax:
+  url: /multimedia/:id/ajax/:page.:sf_format
+  param: { module: iceMultimediaModule, action: ajax, sf_format: json }
+  options: { extra_parameters_as_query_string: true }
+  requirements: { sf_format: (?:html|json) }
+
+ice_multimedia_ajax_reorder:
+  url: /multimedia/ajax/reorder
+  param: { module: iceMultimediaModule, action: ajax, page: reorder, sf_format: json }
+  options: { extra_parameters_as_query_string: true }
+  requirements: { sf_format: (?:html|json) }
+
+ice_multimedia_ajax_delete:
+  url: /multimedia/ajax/delete
+  param: { module: iceMultimediaModule, action: ajax, page: delete, sf_format: json }
+  options: { extra_parameters_as_query_string: true }
+  requirements: { sf_format: (?:html|json) }
+
+ice_multimedia_ajax_upload:
+  url: /multimedia/ajax/upload
+  param: { module: iceMultimediaModule, action: ajax, page: upload, sf_format: json }
+  options: { extra_parameters_as_query_string: true }
+  requirements: { sf_method: [POST], sf_format: (?:html|json) }
